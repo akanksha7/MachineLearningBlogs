@@ -1,0 +1,22 @@
+project:
+  type: website
+
+website:
+  title: "Akanksha Singh"
+  site-url: https://akanksha-singh.us
+  description: "This is Akanksha Singh's personal blog"
+  navbar:
+    right:
+      - text: Blog
+        href: blog.qmd 
+      - icon: github
+        href: https://github.com/AlbertRapp
+      - icon: linkedin
+        href: https://
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+
+editor: visual
+
