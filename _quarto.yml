@@ -1,6 +1,6 @@
 project:
   type: website
-
+  output-dir: docs
 website:
   title: "Akanksha Singh"
   site-url: https://akanksha-singh.us
@@ -10,7 +10,7 @@ website:
       - text: Blog
         href: blog.qmd 
       - icon: github
-        href: https://github.com/AlbertRapp
+        href: https://github.com/akanksha7
       - icon: linkedin
         href: https://
 format:

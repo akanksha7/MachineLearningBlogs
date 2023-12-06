@@ -1,0 +1,22 @@
+[
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/Anomaly/Outlier Detection/index.html",
+      "/posts/Classification/index.html",
+      "/posts/Probability Theory and Random Variables/index.html",
+      "/posts/Linear and Non-Linear Regression/index.html",
+      "/posts/Clustering/index.html"
+    ]
+  },
+  {
+    "listing": "/archive.html",
+    "items": [
+      "/posts/Anomaly/Outlier Detection/index.html",
+      "/posts/Classification/index.html",
+      "/posts/Probability Theory and Random Variables/index.html",
+      "/posts/Linear and Non-Linear Regression/index.html",
+      "/posts/Clustering/index.html"
+    ]
+  }
+]
