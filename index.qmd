@@ -1,15 +1,14 @@
 ---
 title: "Akanksha Singh"
-image: profile.jpg
-about:
-  template: jolla
-  links:
-    - icon: linkedin
-      text: LinkedIn
-      href: https://www.linkedin.com/in/akanksha-singh-91b362112
-    - icon: github
-      text: Github
-      href: https://github.com
+listing:
+  contents: posts/**/*.qmd
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [date, title, reading-time, description, categories, image]
+  feed: true
+page-layout: full
+title-block-banner: false
 ---
-
-About this blog

@@ -3,12 +3,11 @@ project:
   output-dir: docs
 website:
   title: "Akanksha Singh"
-  site-url: https://akanksha-singh.us
   description: "This is Akanksha Singh's personal blog"
   navbar:
     right:
       - text: Blog
-        href: blog.qmd 
+        href: index.qmd 
       - icon: github
         href: https://github.com/akanksha7
       - icon: linkedin

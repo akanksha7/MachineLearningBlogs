@@ -1,6 +1,6 @@
 [
   {
-    "listing": "/blog.html",
+    "listing": "/archive.html",
     "items": [
       "/posts/Anomaly/Outlier Detection/index.html",
       "/posts/Classification/index.html",
@@ -10,7 +10,7 @@
     ]
   },
   {
-    "listing": "/archive.html",
+    "listing": "/index.html",
     "items": [
       "/posts/Anomaly/Outlier Detection/index.html",
       "/posts/Classification/index.html",
