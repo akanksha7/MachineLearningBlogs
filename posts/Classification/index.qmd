@@ -26,6 +26,8 @@ Logistic regression models the relationship between the independent variables (f
 
 The `iris` dataset, included in the `datasets` package of R, provides information about the petal and sepal dimensions of three different iris species: Iris setosa, Iris versicolor, and Iris virginica. We can use this data to build a logistic regression model for classifying iris species based on their petal length and petal width.
 
+model \<- tree(formula = Species \~ Petal.Length + Petal.Width, data = train)
+
 ```{r}
 
 # attach the iris dataset to the environment
@@ -33,69 +35,58 @@ data(iris)
 # rename the dataset
 dataset <- iris
 
+set.seed(42)
 
-head(dataset)
+indexes <- sample(x = 1:150, size = 100)
 
+print(indexes)
 
-# create a list of 80% of the rows in the original dataset we can use for training
-validation_index <- createDataPartition(dataset$Species, p=0.80, list=FALSE)
-# select 20% of the data for validation
-validation <- dataset[-validation_index,]
-# use the remaining 80% of data to training and testing the models
-dataset <- dataset[validation_index,]
+train <- iris[indexes, ]
 
+test <- iris[-indexes, ]
 
-# dimensions of dataset
-dim(dataset)
+library(tree)
 
 
-# list types for each attribute
-sapply(dataset, class)
+model <- tree(formula = Species ~ Petal.Length + Petal.Width, data = train)
+summary(model)
+plot(model)
+text(model)
+
+library(RColorBrewer)
+
+palette <- brewer.pal(3, "Set2")
+
+plot( 
+  x = iris$Petal.Length,
+  y= iris$Petal.Width,
+  pch = 19,
+  col = palette[as.numeric(iris$Species)],
+  main = "Iris Petal Length vs Width",
+  xlab = "Petal Length (cm)",
+  ylab = "Petal Width (cm)")
 
 
-# list the levels for the class
-levels(dataset$Species)
+partition.tree(tree = model, label = "Species", add = TRUE)
+
+predictions <- predict(
+  object = model,
+  newdata = test,
+  type = "class"
+)
+
+table(
+  x = predictions,
+  y = test$Species)
+
+library(caret)
+
+confusionMatrix(
+  data = predictions,
+  reference = test$Species)
 
 
-# summarize the class distribution
-percentage <- prop.table(table(dataset$Species)) * 100
-cbind(freq=table(dataset$Species), percentage=percentage)
 
-# summarize attribute distributions
-summary(dataset)
-
-
-# split input and output
-x <- dataset[,1:4]
-y <- dataset[,5]
-
-
-
-# boxplot for each attribute on one image
-par(mfrow=c(1,4))
-  for(i in 1:4) {
-  boxplot(x[,i], main=names(iris)[i])
-  }
-
-
-# barplot for class breakdown
-plot(y)
-
-# scatterplot matrix
-featurePlot(x=x, y=y, plot="ellipse")
-
-
-# box and whisker plots for each attribute
-featurePlot(x=x, y=y, plot="box")
-
-# density plots for each attribute by class value
-scales <- list(x=list(relation="free"), y=list(relation="free"))
-featurePlot(x=x, y=y, plot="density", scales=scales)
-
-
-# Run algorithms using 10-fold cross validation
-control <- trainControl(method="cv", number=10)
-metric <- "Accuracy"
 ```
 
 This code block performs logistic regression using the `glm()` function from the `stats` package. The formula `target ~ petal.length + petal.width` specifies the dependent variable (target) and the independent variables (petal.length and petal.width). The `family = binomial()` argument indicates that we are performing binary classification.

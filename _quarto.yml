@@ -6,8 +6,8 @@ website:
   description: "This is Akanksha Singh's personal blog"
   navbar:
     right:
-      - text: Blog
-        href: index.qmd 
+      - text: About
+        href: about.qmd 
       - icon: github
         href: https://github.com/akanksha7
       - icon: linkedin

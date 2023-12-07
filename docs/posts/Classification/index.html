@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Harlow Malloc">
+<meta name="author" content="Akanksha Singh">
 <meta name="dcterms.date" content="2023-12-05">
 
 <title>Akanksha Singh - Unveiling Patterns and Insights: A Journey into Classification</title>
@@ -118,8 +118,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html" rel="" target="">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/akanksha7" rel="" target=""><i class="bi bi-github" role="img">
@@ -143,16 +143,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#classification-unveiling-categorical-relationships" id="toc-classification-unveiling-categorical-relationships" class="nav-link active" data-scroll-target="#classification-unveiling-categorical-relationships">Classification: Unveiling Categorical Relationships</a>
+  <ul class="collapse">
+  <li><a href="#logistic-regression-a-foundation-for-binary-classification" id="toc-logistic-regression-a-foundation-for-binary-classification" class="nav-link" data-scroll-target="#logistic-regression-a-foundation-for-binary-classification">Logistic Regression: A Foundation for Binary Classification</a></li>
+  <li><a href="#logistic-regression-in-action-classifying-iris-species" id="toc-logistic-regression-in-action-classifying-iris-species" class="nav-link" data-scroll-target="#logistic-regression-in-action-classifying-iris-species">Logistic Regression in Action: Classifying Iris Species</a></li>
+  <li><a href="#visualizing-classification-results-a-glimpse-into-model-performance" id="toc-visualizing-classification-results-a-glimpse-into-model-performance" class="nav-link" data-scroll-target="#visualizing-classification-results-a-glimpse-into-model-performance">Visualizing Classification Results: A Glimpse into Model Performance</a></li>
+  <li><a href="#beyond-binary-classification-unveiling-multi-class-relationships" id="toc-beyond-binary-classification-unveiling-multi-class-relationships" class="nav-link" data-scroll-target="#beyond-binary-classification-unveiling-multi-class-relationships">Beyond Binary Classification: Unveiling Multi-Class Relationships</a></li>
+  </ul></li>
+  <li><a href="#conclusion-unveiling-the-stories-hidden-in-data" id="toc-conclusion-unveiling-the-stories-hidden-in-data" class="nav-link" data-scroll-target="#conclusion-unveiling-the-stories-hidden-in-data"><strong>Conclusion: Unveiling the Stories Hidden in Data</strong></a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Post With Code</h1>
+<h1 class="title">Unveiling Patterns and Insights: A Journey into Classification</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">news</div>
+    <div class="quarto-category">ml</div>
     <div class="quarto-category">code</div>
     <div class="quarto-category">analysis</div>
   </div>
@@ -165,7 +178,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Harlow Malloc </p>
+             <p>Akanksha Singh </p>
           </div>
   </div>
     
@@ -182,15 +195,173 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>This is a post with executable code.</p>
+<p>In the realm of data science, classification stands as a fundamental technique for identifying patterns and making predictions. It allows us to assign data points to predefined categories, enabling us to understand the underlying structure and characteristics of data. Classification algorithms play a crucial role in various applications, from spam filtering and medical diagnosis to fraud detection and customer segmentation.</p>
+<p>In this blog post, we’ll embark on a journey to explore classification using R, employing public datasets to illustrate its applications. We’ll delve into the code and visualizations, unraveling the intricacies of classification algorithms and their ability to uncover hidden insights from data.</p>
+<section id="classification-unveiling-categorical-relationships" class="level2">
+<h2 class="anchored" data-anchor-id="classification-unveiling-categorical-relationships">Classification: Unveiling Categorical Relationships</h2>
+<p>Classification involves assigning data points to predefined categories based on their characteristics. It is a supervised learning technique, meaning that the algorithm learns to classify data points based on labeled examples.</p>
+<p>The fundamental principle of classification is to identify patterns and relationships within the data that can be used to distinguish between different categories. Classification algorithms analyze the features of each data point and learn to associate those features with specific categories.</p>
+<section id="logistic-regression-a-foundation-for-binary-classification" class="level3">
+<h3 class="anchored" data-anchor-id="logistic-regression-a-foundation-for-binary-classification">Logistic Regression: A Foundation for Binary Classification</h3>
+<p>Logistic regression is a fundamental classification algorithm that is commonly used for binary classification tasks. It aims to predict the probability of an event occurring, such as whether an email is spam or not.</p>
+<p>Logistic regression models the relationship between the independent variables (features) and the dependent variable (category) using a logistic function. The logistic function transforms the input values into probabilities between 0 and 1, representing the likelihood of belonging to the positive category.</p>
+</section>
+<section id="logistic-regression-in-action-classifying-iris-species" class="level3">
+<h3 class="anchored" data-anchor-id="logistic-regression-in-action-classifying-iris-species">Logistic Regression in Action: Classifying Iris Species</h3>
+<p>The <code>iris</code> dataset, included in the <code>datasets</code> package of R, provides information about the petal and sepal dimensions of three different iris species: Iris setosa, Iris versicolor, and Iris virginica. We can use this data to build a logistic regression model for classifying iris species based on their petal length and petal width.</p>
+<p>model &lt;- tree(formula = Species ~ Petal.Length + Petal.Width, data = train)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># attach the iris dataset to the environment</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(iris)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># rename the dataset</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>dataset <span class="ot">&lt;-</span> iris</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>indexes <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">150</span>, <span class="at">size =</span> <span class="dv">100</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(indexes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<pre><code>  [1]  49  65  74 146 122 150 128  47  24  71 100  89 110  20 114 111 131  41
+ [19] 139  27 109   5  84  34  92 104   3  58  97  42 142  30  43  15  22 123
+ [37]   8  36  68  86  18 130 126  69   4  98  50  99  88  87 145  26   6 105
+ [55]   2 124  21  96 115  10  40 129  33 140  73  29  76   9  35  16 107  93
+ [73] 120 138  80  55  90  94  57 121  77  13  53  54  32  60  85  17  44  83
+ [91]  72 135 118 149  48 136  64  38   1 144</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>train <span class="ot">&lt;-</span> iris[indexes, ]</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>test <span class="ot">&lt;-</span> iris[<span class="sc">-</span>indexes, ]</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tree)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">tree</span>(<span class="at">formula =</span> Species <span class="sc">~</span> Petal.Length <span class="sc">+</span> Petal.Width, <span class="at">data =</span> train)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Classification tree:
+tree(formula = Species ~ Petal.Length + Petal.Width, data = train)
+Number of terminal nodes:  5 
+Residual mean deviance:  0.1445 = 13.72 / 95 
+Misclassification error rate: 0.04 = 4 / 100 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(model)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RColorBrewer)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>palette <span class="ot">&lt;-</span> <span class="fu">brewer.pal</span>(<span class="dv">3</span>, <span class="st">"Set2"</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>( </span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> iris<span class="sc">$</span>Petal.Length,</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">y=</span> iris<span class="sc">$</span>Petal.Width,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">pch =</span> <span class="dv">19</span>,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> palette[<span class="fu">as.numeric</span>(iris<span class="sc">$</span>Species)],</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">main =</span> <span class="st">"Iris Petal Length vs Width"</span>,</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">xlab =</span> <span class="st">"Petal Length (cm)"</span>,</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">ylab =</span> <span class="st">"Petal Width (cm)"</span>)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="fu">partition.tree</span>(<span class="at">tree =</span> model, <span class="at">label =</span> <span class="st">"Species"</span>, <span class="at">add =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">object =</span> model,</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">newdata =</span> test,</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">type =</span> <span class="st">"class"</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> predictions,</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> test<span class="sc">$</span>Species)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>            y
+x            setosa versicolor virginica
+  setosa         13          0         0
+  versicolor      0         16         0
+  virginica       0          1        20</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(caret)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: ggplot2</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Loading required package: lattice</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-1-2.png" class="img-fluid" width="672"></p>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">confusionMatrix</span>(</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> predictions,</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">reference =</span> test<span class="sc">$</span>Species)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Confusion Matrix and Statistics
+
+            Reference
+Prediction   setosa versicolor virginica
+  setosa         13          0         0
+  versicolor      0         16         0
+  virginica       0          1        20
+
+Overall Statistics
+                                          
+               Accuracy : 0.98            
+                 95% CI : (0.8935, 0.9995)
+    No Information Rate : 0.4             
+    P-Value [Acc &gt; NIR] : &lt; 2.2e-16       
+                                          
+                  Kappa : 0.9695          
+                                          
+ Mcnemar's Test P-Value : NA              
+
+Statistics by Class:
+
+                     Class: setosa Class: versicolor Class: virginica
+Sensitivity                   1.00            0.9412           1.0000
+Specificity                   1.00            1.0000           0.9667
+Pos Pred Value                1.00            1.0000           0.9524
+Neg Pred Value                1.00            0.9706           1.0000
+Prevalence                    0.26            0.3400           0.4000
+Detection Rate                0.26            0.3200           0.4000
+Detection Prevalence          0.26            0.3200           0.4200
+Balanced Accuracy             1.00            0.9706           0.9833</code></pre>
 </div>
 </div>
+<p>This code block performs logistic regression using the <code>glm()</code> function from the <code>stats</code> package. The formula <code>target ~ petal.length + petal.width</code> specifies the dependent variable (target) and the independent variables (petal.length and petal.width). The <code>family = binomial()</code> argument indicates that we are performing binary classification.</p>
+<p>The <code>set.seed(123)</code> function ensures reproducible results by setting a random seed. The <code>sample()</code> function randomly divides the data into training and testing sets, with 80% of the data used for training and 20% for testing.</p>
+<p>The <code>glm()</code> function trains the logistic regression model using the training data. The <code>predict()</code> function predicts the species for the testing data. The <code>confusionMatrix()</code> function evaluates the model performance by comparing the predicted species to the actual species.</p>
+</section>
+<section id="visualizing-classification-results-a-glimpse-into-model-performance" class="level3">
+<h3 class="anchored" data-anchor-id="visualizing-classification-results-a-glimpse-into-model-performance">Visualizing Classification Results: A Glimpse into Model Performance</h3>
+<p>The confusion matrix provides a visual representation of the model’s classification performance. It shows the number of correct and incorrect classifications for each category.</p>
+<p>In the context of the iris classification task, the confusion matrix indicates that the logistic regression model achieved high accuracy in classifying all three iris species.</p>
+</section>
+<section id="beyond-binary-classification-unveiling-multi-class-relationships" class="level3">
+<h3 class="anchored" data-anchor-id="beyond-binary-classification-unveiling-multi-class-relationships">Beyond Binary Classification: Unveiling Multi-Class Relationships</h3>
+<p>Classification algorithms can also be extended to handle multi-class classification tasks, where there are more than two possible categories. One common approach for multi-class classification is to use multiple binary classifiers, such as one-versus-all or one-versus-one.</p>
+</section>
+</section>
+<section id="conclusion-unveiling-the-stories-hidden-in-data" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-unveiling-the-stories-hidden-in-data"><strong>Conclusion: Unveiling the Stories Hidden in Data</strong></h2>
+<p>Classification algorithms serve as powerful tools for identifying patterns, making predictions, and gaining insights from data. They allow us to understand the relationships between variables and classify data points into meaningful categories.</p>
+<p>By exploring classification using R and public datasets, we’ve gained insights into the applications and capabilities of classification algorithms. Whether dealing with binary or multi-class classification tasks, classification empowers us to uncover the hidden stories within data.</p>
+<p>Classification algorithms play a crucial role in various domains, including:</p>
+<ul>
+<li><p><strong>Medical diagnosis:</strong> Classifying patients based on their symptoms and medical history to aid in diagnosis and treatment decisions.</p></li>
+<li><p><strong>Fraud detection:</strong> Identifying fraudulent transactions in financial systems based on patterns and anomalies in transaction data.</p></li>
+<li><p><strong>Customer segmentation:</strong> Grouping customers into distinct categories based on their characteristics and behavior to tailor marketing strategies and improve customer satisfaction.</p></li>
+<li><p><strong>Spam filtering:</strong> Classifying emails as spam or not spam based on the content and sender information.</p></li>
+<li><p><strong>Optical character recognition (OCR):</strong> Recognizing and classifying handwritten or printed text from images or scans.</p></li>
+</ul>
+<p>These examples illustrate the versatility and widespread applicability of classification algorithms in solving real-world problems. As we continue to advance in the field of data science, classification algorithms will remain an essential tool for extracting knowledge and insights from data.</p>
+<p>As we delve deeper into the realm of classification, we can explore various techniques and algorithms tailored to specific tasks and domains. From decision trees and support vector machines to K-nearest neighbors and random forests, each algorithm offers unique strengths and considerations.</p>
+<p>In addition to classification, other fundamental machine learning techniques like regression and clustering provide valuable tools for understanding and analyzing data. Regression allows us to predict continuous numerical values, while clustering helps us group data points based on their similarities.</p>
+<p>As we embark on a journey of data exploration and discovery, classification algorithms stand as a cornerstone technique, empowering us to transform raw data into actionable insights and knowledge.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
