@@ -2,8 +2,10 @@ project:
   type: website
   output-dir: docs
 website:
-  title: "Akanksha Singh"
+  title: "Machine Learning blogs"
   description: "This is Akanksha Singh's personal blog"
+  repo-url: https://akanksha7.github.io/MachineLearningBlogs/
+  repo-actions: [source]
   navbar:
     right:
       - text: About
@@ -11,7 +13,7 @@ website:
       - icon: github
         href: https://github.com/akanksha7
       - icon: linkedin
-        href: https://
+        href: https://www.linkedin.com/in/akanksha-singh-91b362112
 format:
   html:
     theme: cosmo
