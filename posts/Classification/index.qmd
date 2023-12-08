@@ -3,7 +3,7 @@ title: "Patterns and Insights: A Journey into Classification"
 author: "Akanksha Singh"
 date: "2023-12-05"
 categories: [ml, code, analysis]
-image: "image.jpg"
+image: "classification.jpg"
 ---
 
 In the realm of data science, classification stands as a fundamental technique for identifying patterns and making predictions. It allows us to assign data points to predefined categories, enabling us to understand the underlying structure and characteristics of data. Classification algorithms play a crucial role in various applications, from spam filtering and medical diagnosis to fraud detection and customer segmentation.
