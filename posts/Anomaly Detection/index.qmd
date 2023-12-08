@@ -1,12 +1,10 @@
 ---
-title: "Anomaly/Outlier Detection"
+title: "Unveiling the Unusual: Anomaly/Outlier Detection in R"
 date: "2023-12-2"
 reading-time: "5 mins"
 categories: [ml, code, analysis]
-image: "probability.jpg"
+image: "anomaly.jpg"
 ---
-
-## Unveiling the Unusual: Anomaly/Outlier Detection in R
 
 In the vast landscape of data, anomalies often lurk in the shadows, hiding amongst the patterns and trends. These atypical data points, also known as outliers, can pose significant challenges in various domains, from financial fraud detection and medical diagnosis to cybersecurity and fault detection in machinery.
 

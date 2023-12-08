@@ -2,10 +2,8 @@ project:
   type: website
   output-dir: docs
 website:
-  title: "Machine Learning blogs"
+  title: "Akanksha Singh"
   description: "This is Akanksha Singh's personal blog"
-  repo-url: https://akanksha7.github.io/MachineLearningBlogs/
-  repo-actions: [source]
   navbar:
     right:
       - text: About

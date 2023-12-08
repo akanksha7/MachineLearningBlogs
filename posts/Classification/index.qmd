@@ -1,5 +1,5 @@
 ---
-title: "Unveiling Patterns and Insights: A Journey into Classification"
+title: "Patterns and Insights: A Journey into Classification"
 author: "Akanksha Singh"
 date: "2023-12-05"
 categories: [ml, code, analysis]

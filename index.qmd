@@ -1,5 +1,5 @@
 ---
-title: "Akanksha Singh"
+title: "Machine Learning Blogs"
 listing:
   contents: posts/**/*.qmd
   sort: "date desc"

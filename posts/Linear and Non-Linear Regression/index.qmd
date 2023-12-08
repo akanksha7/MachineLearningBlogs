@@ -1,5 +1,5 @@
 ---
-title: "Unveiling Relationships in Data: A Journey through Linear and Nonlinear Regression"
+title: "Relationships in Data: A Journey through Linear and Nonlinear Regression"
 date: "2023-11-25"
 reading-time: "5 mins"
 categories: [ml, code, analysis]

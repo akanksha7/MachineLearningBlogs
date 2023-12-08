@@ -1,14 +1,12 @@
 ---
-title: "Probability Theory and random Variables"
+title: "The Secrets of Uncertainty:Probability Theory and Random Variables"
 date: "2023-12-1"
 reading-time: "5 mins"
 categories: [ml, code, analysis]
-image: "clustering.jpg"
+image: "probability.jpg"
 ---
 
-## Unveiling the Secrets of Uncertainty: A Journey into Probability Theory and Random Variables
-
-In the realm of data science and machine learning, probability theory and random variables lie at the very foundation of understanding uncertainty and building robust models. They provide the framework for quantifying the likelihood of events, analyzing data variability, and making informed decisions under uncertainty.
+Probability theory and random variables lie at the very foundation of understanding uncertainty and building robust models. They provide the framework for quantifying the likelihood of events, analyzing data variability, and making informed decisions under uncertainty.
 
 In this blog post, we'll embark on a journey to explore the fundamental concepts of probability theory and random variables, using code and visualization to illustrate their applications and insights. We'll delve into the important steps of the code, unraveling the hidden workings of these powerful tools and their ability to unlock the secrets of uncertainty.
 
